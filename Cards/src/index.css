@@ -3,7 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
 .Card {
   max-width: 250px;
   border: 1px solid rgb(190, 190, 190);
@@ -13,6 +19,8 @@
   margin: 10px;
   text-align: center;
   display: inline-block;
+  /* user-select: none; */
+  /* -webkit-user-drag: none; */
 }
 
 .profile {
@@ -23,5 +31,74 @@
 
 .title {
   font-size: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Lucida;
+}
+
+.click-button {
+  width: 250px;
+  height: 2rem;
+  border: none;
+  border: 1px solid rgb(177, 174, 174);
+  background-color: white;
+  /* border-radius: 0.4rem; */
+  box-shadow: 3px 3px 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.click-button:active {
+  box-shadow: none;
+  transition: all 0.3s;
+  background-color: hsl(350, 100%, 81%);
+}
+
+/* Counter */
+.counter-display {
+  text-align: center;
+}
+.button-row {
+  display: flex;
+  width: 250px;
+  margin-top: 10px;
+}
+
+.decrement {
+  background-color: red;
+  margin-right: 8px;
+  height: 2rem;
+  border: none;
+  padding: 5px;
+  border: 1px solid rgb(177, 174, 174);
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 0;
+  cursor: pointer;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.reset {
+  background-color: rgb(246, 238, 0);
+  margin-right: 8px;
+  height: 2rem;
+  border: none;
+  padding: 5px;
+  border: 1px solid rgb(177, 174, 174);
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 0;
+  cursor: pointer;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.increment {
+  background-color: rgb(0, 255, 0);
+  height: 2rem;
+  border: none;
+  padding: 5px;
+  border: 1px solid rgb(177, 174, 174);
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 0;
+  cursor: pointer;
+  flex-grow: 1;
+  flex-basis: 0;
 }
