@@ -13,6 +13,9 @@ export function NameInput() {
     console.log(event.target.value); // 👉 the value in that element (if it's an input)
   };
 
+  const [profile, setprofile] = useState("");
+  const handleprofile = (event) => setprofile(event.target.value);
+
   return (
     <div>
       <input
@@ -21,15 +24,19 @@ export function NameInput() {
         style={{ width: "250px" }}
         onChange={handleChange}
         onClick={handleClick}
+        placeholder="What's your name?"
       />
       <p>
         Your name is: <span className="input-text"> {name} </span>
       </p>
+
       <textarea
         className="modern-textarea"
         placeholder="Write your thoughts..."
         rows="5"
+        onChange={handleprofile}
       />
+      <p>Profile🧑🏻: {profile}</p>
     </div>
   );
 }
